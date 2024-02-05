@@ -1,6 +1,7 @@
 package ru.vavtech.songbase.views.management;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.PasswordField;
@@ -45,6 +46,7 @@ public class ManagementView extends VerticalLayout {
                 add(mainContent);
 
                 deleteAllButton = new Button("Очистить БД");
+                deleteAllButton.addThemeVariants(ButtonVariant.LUMO_ERROR, ButtonVariant.LUMO_PRIMARY);
                 deleteAllButton.addClickListener(event1 -> {
                     repository.deleteAll();
                 });
